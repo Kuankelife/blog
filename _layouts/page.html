@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <img class="userImg" src="/img/assets/laofu.jpg" alt="付威">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.username }}{% endif %}</h1>
+               
+                    <span class="subheading">{{ page.description }}</span>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<section>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-9  col-md-9  post-container">
+    			{{ content }}
+    		</div>
+             <div class="col-lg-3 col-md-3 hide990">
+             <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">作者信息</h3>
+                        </div>
+                        <div class="panel-body">
+                             
+                             <div class="site-heading center">
+                               
+                                <h4>姓名:{{ site.username }}</h4>
+                           
+                          一枚程序员,现在还停留在码农阶段,喜欢研究架构和源码,希望成为一名极客,写此博客是为了记录学习的历程和生活中的感触, 希望能与大家共勉---致力于心中的大牛 
+                  
+                            </div>
+            
+                        </div>
+                 </div>
+            </div>
+
+   <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">本站下载资源</h3>
+                        </div>
+                        <div class="panel-body">
+                            
+                            {% for tag in site.tags %}
+                                {% if tag[0]=='推广' %}
+                                {% for post in tag[1] limit:5%} 
+                                      <div>
+                                        <a href="{{ post.url | prepend: site.baseurl }}" class="text-muted"  target="_blank">
+                                           {{ post.title }}
+                                             
+                                        </a>
+                                
+                                    </div>
+                                      <hr style="margin-top:5px">
+                                {% endfor %}
+                                {% endif %}
+                                {% endfor %}
+                          
+                        </div>
+                 </div>
+            </div>
+            <div class="row">   
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">文章标签</h3>
+                        </div>
+                        <div class="panel-body">
+                          <div id='tag_cloud' class="tags">
+                                {% for tag in site.tags %}
+                                   <a href="{{ tag[0]| prepend: '/tags/#' | prepend: site.baseurl}}" title="{{ tag[0] }}" rel="{{ tag[1].size }}" target="_blank">{{ tag[0] }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                 </div>
+            </div>
+             <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">最新文章</h3>
+                        </div>
+                        <div class="panel-body">
+                             {% for post in paginator.posts limit:5%}
+                                    <div>
+                                        <a href="{{ post.url | prepend: site.baseurl }}" class="text-muted"  target="_blank">
+                                           {{ post.title }}
+                                             
+                                        </a>
+                                
+                                    </div>
+                                    <hr style="margin-top:5px">
+                                    {% endfor %}
+                       
+                        </div>
+                 </div>
+            </div>
+
+            <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">关键词</h3>
+                        </div>
+                        <div class="panel-body">
+                              建设中...
+                        </div>
+                 </div>
+            </div>
+
+              <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">相关友链</h3>
+                        </div>
+                        <div class="panel-body">
+                         
+                           <a href="http://gouqizi.laofu.online/" target="_blank">枸杞养生网</a>
+
+                 
+                        </div>
+                 </div>
+            </div>
+
+
+              <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">推荐博客</h3>
+                        </div>
+                        <div class="panel-body">
+                              如需添加到列表，请邮件到<a mailto:laofu_online@163.com>laofu_online@163.com</a>
+                        </div>
+                 </div>
+            </div>
+           <div class="row">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Other</h3>
+                        </div>
+                        <div class="panel-body">
+                      <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+
+                 
+                        </div>
+                 </div>
+            </div>
+
+    	</div> 
+    </div>
+</section>

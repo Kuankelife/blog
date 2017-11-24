@@ -1,0 +1,64 @@
+/*
+* @Author: fuwei
+* @Date:   2017-09-08 16:31:01
+* @Last Modified by:   fuwei
+* @Last Modified time: 2017-09-08 18:18:27
+*/
+
+.catalogContainer {
+    position: fixed;
+    bottom: 7%;
+    border: 1px solid #eee;
+    width: 220px;
+    right: 2%;
+    font-size: 14px;
+    background: #eee;
+    opacity: 0.7;
+}
+.cot-close {
+
+    right: 2%;
+    top: 2%;
+     font-size: 12px;
+
+}
+
+.catalogContainer ul {
+    list-style-type: none;
+    width: 220px;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .catalogContainer {
+
+        bottom: 10%;
+        border: 1px solid #eee;
+        width: 100px;
+        font-size: 14px;
+        background: #eee;
+        opacity: 0.3;
+    }
+    .catalogContainer ul {
+        width: 100px;
+        overflow: hidden;
+        padding-left: 5px;
+    }
+}
+
+.mock {
+    box-shadow: 1px;
+    background: #bfbfbf;
+    cursor: move;
+}
+.item {
+    width: 200px;
+    padding: 2px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.item a {
+    text-decoration: none;
+}

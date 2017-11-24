@@ -1,0 +1,15 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for post in site.posts %}
+   <url>
+    <loc>http://blog.laofu.online{{ post.url | remove: 'index.html' }}</loc>
+     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+     <changefreq>daily</changefreq>
+  </url>
+   
+    {% endfor %}
+
+
+</urlset>

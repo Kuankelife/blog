@@ -1,0 +1,127 @@
+---
+layout: default
+---
+
+<!-- Post Header -->
+<header class="intro-header"  style="background-color: #ffffff">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                   
+                    <h1>{{ page.title }}</h1>
+                    {% comment %}
+                        always create a h2 for keeping the margin
+                    {% endcomment %}
+                    {% comment %} if page.subtitle {% endcomment %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% comment %} endif {% endcomment %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }} &nbsp <i class="fa fa-pencil" title='字数' aria-hidden="true"></i>{{ content | strip_html | strip_newlines | size }} &nbsp<i class="fa fa-clock-o" title='建议阅读时间' aria-hidden="true"></i> {{ content | strip_html | strip_newlines | size | divided_by:350 | round}}min   &nbsp  <i class="fa fa-eye" title='访问量' aria-hidden="true"></i>
+                    {% if site.leancloud.enable %}
+                     <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
+             
+                    <span class="leancloud-visitors-count"></span>
+                   
+                     {% endif %}
+                     </span>
+                     <div class="tags">
+                        {% for tag in page.tags %}
+                       <i class="fa fa-tag" aria-hidden="true"></i> <a class="tag tagpost" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container" style="overflow-y:hidden;">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+				{{ content }}
+
+(本文完)
+<blockquote>
+    <p>作者:付威</p>
+    <p>
+        如果觉得对您有帮助,可以下方的订阅,或者选择右侧捐赠作者，如果有问题，请在捐赠后咨询，谢谢合作</p>
+    
+    <p>如有任何知识产权、版权问题或理论错误，还请指正。</p>
+     
+    <p>自由转载-非商用-非衍生-保持署名,请遵循：<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">创意共享3.0许可证</a>  </p>
+    <p>交流请加群113249828：
+       <a style="display: inline;" target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=cdff009c3da69f115926345687628e97bec1f6d28339a4e1ffc33255b0de8796">点击加群</a>
+      &nbsp 或发我邮件 <a href="mailto:laofu_online@163.com">laofu_online@163.com</a></p>
+       <p> </p>
+       <!-- <p> 鉴于博客打开速度过慢，关闭评论插件</p> -->
+</blockquote>
+
+<hr>
+ 
+  <ul class="pager">
+  {% if page.previous %}
+    <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一篇:{{ page.previous.title }}</a></li>
+  {% endif %}
+  {% if page.next %}
+    <li class="next" style="float: right;"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一篇:{{ page.next.title }} &rarr;</a></li>
+
+  {% endif %}
+  </ul>
+    
+ <hr>
+ <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTYyNy82MTk1">
+  <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+  </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+<!-- UY BEGIN -->
+<!-- <div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2148960"></script> -->
+<!-- UY END -->
+ 
+</div>
+</div>
+</div>
+</article>
+
+<!--浮动目录-->
+<!-- <div style="position: fixed;bottom: 10%;border: 1px solid black;width: 220px;right: 0">
+  <ul>
+  <li><a href="#ascii-的由来">ASCII 的由来</a></li>
+  <li><a href="#汉字怎么办">汉字怎么办？</a></li>
+  <li><a href="#博大精深的文化带来的编码麻烦">博大精深的文化带来的编码麻烦</a></li>
+  <li><a href="#unicode的诞生">Unicode的诞生</a></li>
+  <li><a href="#utf8的出现">UTF8的出现</a></li>
+</ul>
+</div> -->
+
+<script>
+window.tctipConfig = {
+        staticPrefix:   "http://static.tctip.com",
+        buttonImageId:  1,
+        buttonTip:  "zanzhu",
+        list:{
+            alipay: {qrimg: "http://ov0ibj1bt.bkt.clouddn.com/o_zhifubao.png"},
+            weixin:{qrimg: "http://ov0ibj1bt.bkt.clouddn.com/o_weixin.png"}, 
+        }
+};
+</script>
+
+<script src="http://static.tctip.com/js/tctip.min.js"></script>

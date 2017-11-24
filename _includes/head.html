@@ -1,0 +1,48 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META NAME="Title" CONTENT="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <META NAME="Description" CONTENT="{% if page.title %}{{ page.description }}{% else %}我叫付威,外号laofu(老付),一枚程序员,现在还停留在码农阶段,喜欢研究架构和源码,希望成为一名极客,写此博客是为了记录学习的历程和生活中的感触, 希望能与大家共勉---致力于心中的大牛{% endif %}">
+    <META NAME="Keywords" CONTENT="{% if page.title %}{{ page.keywords }}|{% endif %}付威的网络博客|付威|付威blog">
+ 
+    <META NAME="Language" CONTENT="zh-CN">
+  
+   
+    <META NAME="Robots" CONTENT="All">
+
+    <meta name="baidu-site-verification" content="V8iP4LVfFf" />
+    <meta name="google-site-verification" content="57SSOcF9us_veUcgcVszibE8b5NHxeN6fM8CGgblHFs" />
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/special.min.css" | prepend: site.baseCloudUrl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/syntax.css" | prepend: site.baseCloudUrl }}">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/lightbox/2.6/css/lightbox.css">
+
+<link rel="alternate" type="application/rss+xml"
+  href="feed.xml" title="老付">
+    <!-- Custom Fonts -->
+    <link href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 
+    <link href="http://apps.bdimg.com/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet" type="text/css">
+    <style>
+	.ds-powered-by {
+		display:none !important ;
+	}
+	.ds-post-toolbar .ds-sync{
+		display:none !important ;
+	}
+    </style>
+     <link href="/css/catalog.css" rel="stylesheet" type="text/css">
+
+</head>

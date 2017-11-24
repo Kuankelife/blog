@@ -1,0 +1,173 @@
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    {% if site.zhihu_username %}
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {% if site.github_username %}
+                    <li>
+                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+                <p class="copyright text-muted" id="history" style="margin-top: 10px"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="hm_t_118110"></div>
+
+<!-- jQuery -->
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+ <script src="{{"/jquery.tagcloud.js" | prepend: site.baseCloudUrl }}" type="text/javascript" charset="utf-8"></script> 
+<script language="javascript">
+    $.fn.tagcloud.defaults = {
+        //size: {start: 1, end: 1, unit: 'em'},
+       color: {start: '#CDE', end: '#F52'},
+
+    };
+    $(function () {
+        $('#tag_cloud a').tagcloud();
+          NProgress.done();
+    });
+</script>
+ <script src="http://apps.bdimg.com/libs/lightbox/2.6/js/lightbox.min.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- Highlight.js -->
+<script>
+    async("http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js",function(){
+        hljs.initHighlightingOnLoad();
+    })
+    
+</script>
+<link href="http://apps.bdimg.com/libs/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control cb-search-content" id="cb-search-content" style="position: fixed; top: 60px" placeholder="文章标题 日期 标签" >
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="http://ov0ibj1bt.bkt.clouddn.com/cb-close.png"  id="cb-close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="http://ov0ibj1bt.bkt.clouddn.com/cb-search.png"  id="cb-search-btn"  title="双击ctrl试一下"/>
+</div>
+
+<link rel="stylesheet" href="{{ "/cb-search.css" | prepend: site.baseCloudUrl }}">
+
+<script src="{{ "/bootstrap3-typeahead.min.js" | prepend: site.baseCloudUrl }}"></script>
+<script src="{{ "/cb-search.js" | prepend: site.baseCloudUrl }}"></script>
+ 
+
+<div style="display:none;">
+  <script src="//s19.cnzz.com/z_stat.php?id=1000478693&web_id=1000478693" language="JavaScript"></script>	
+</div>
+   
+
+<script type="text/javascript">
+    
+  (function(){
+        $("article img").each(function(index,value){
+
+            var aDom=$("<a></a>").attr({
+                "href":$(value).attr("src"),
+                "data-lightbox":$(value).attr("src"),
+                "data-title":$(value).attr("alt")
+              });
+            $(value).wrap(aDom);
+
+        });
+        var range=parseInt((Date.now()-new Date("2017-05-31"))/(1000*3600*24));
+        $("#history").html("博客已经上线:"+range+"天")
+         if(window.location.href.indexOf("127.0.0.1")===-1){
+           $("#pvLi").append('<a><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3215509&c=9646840" alt="AmazingCounters.com"></a>');
+         }
+
+    
+    })();
+
+
+    function skip(url){
+        window.open(url);
+    }
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+ 
+<script src="http://apps.bdimg.com/libs/nprogress/0.2.0/nprogress.min.js"></script>
+ <script type="text/javascript">
+     (function(){
+       NProgress.start() ;
+     })();
+ </script>   
+
+<script src="/js/catalog.js"></script>
+<script type="text/javascript">
+    catalog.init();
+</script>
+
+<script>(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?4b7d87d1dcae0c2cc3352a80e190bc82":"https://jspassport.ssl.qhimg.com/11.0.1.js?4b7d87d1dcae0c2cc3352a80e190bc82";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
