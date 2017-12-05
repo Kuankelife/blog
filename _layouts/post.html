@@ -16,7 +16,7 @@ layout: default
                     {% comment %} if page.subtitle {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }} &nbsp <i class="fa fa-pencil" title='字数' aria-hidden="true"></i>{{ content | strip_html | strip_newlines | size }} &nbsp<i class="fa fa-clock-o" title='建议阅读时间' aria-hidden="true"></i> {{ content | strip_html | strip_newlines | size | divided_by:350 | round}}min   &nbsp  <i class="fa fa-eye" title='访问量' aria-hidden="true"></i>
+                    <span class="meta"><i class="fa fa-user" aria-hidden="true"></i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %}&nbsp&nbsp&nbsp&nbsp<i class="fa fa-calendar" title='写作日期' aria-hidden="true"></i>&nbsp{{ page.date | date: "%Y-%m-%d" }} &nbsp <i class="fa fa-pencil" title='字数' aria-hidden="true"></i>{{ content | strip_html | strip_newlines | size }} &nbsp<i class="fa fa-clock-o" title='建议阅读时间' aria-hidden="true"></i> {{ content | strip_html | strip_newlines | size | divided_by:350 | round}}min   &nbsp  <i class="fa fa-eye" title='访问量' aria-hidden="true"></i>
                     {% if site.leancloud.enable %}
                      <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
              

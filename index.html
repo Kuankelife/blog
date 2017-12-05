@@ -20,7 +20,7 @@ description: "付威的网络博客"
     </a>
 <p class="post-meta">
 
-    Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    <i class="fa fa-user" aria-hidden="true"></i>{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}&nbsp&nbsp <i class="fa fa-calendar" title='写作日期' aria-hidden="true"></i> {{ post.date | date:"%Y-%m-%d" }}
 &nbsp<i class="fa fa-eye" title='访问量' aria-hidden="true"></i>
     {% if site.leancloud.enable %}
      <span id="{{ post.url }}" class="post-link" data-flag-title="{{ post.title }}">
