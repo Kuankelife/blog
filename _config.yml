@@ -10,7 +10,7 @@ username: 付威
 domain: "http://ov0ibj1bt.bkt.clouddn.com/"
 
 #Baidu analytics / 百度统计(异步的js码，注意使用异步版本的)
-baidu_analyze: fce7d216459d05df5b8386ca65a90e8d
+baidu_analyze: 4826d46b55486f7bc404abcaa3b65bc6
 ##########################上述信息需要您修改,cloud_tie_public_key两侧必须有引号############################
 
 

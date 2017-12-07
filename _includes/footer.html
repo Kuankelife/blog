@@ -37,7 +37,10 @@
                     {% endif %}
                 </ul>
                 <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-                <p class="copyright text-muted" id="history" style="margin-top: 10px"></p>
+                <p class="copyright text-muted" id="history" style="margin-top: 10px">
+                    总访问量：<script language="javascript" type="text/javascript" src="//quote.users.51.la/?id=19353542&amp;mb=1"></script>
+                </p>
+
             </div>
         </div>
     </div>
@@ -105,30 +108,20 @@
 <script src="{{ "/bootstrap3-typeahead.min.js" | prepend: site.baseCloudUrl }}"></script>
 <script src="{{ "/cb-search.js" | prepend: site.baseCloudUrl }}"></script>
  
-
-<div style="display:none;">
-  <script src="//s19.cnzz.com/z_stat.php?id=1000478693&web_id=1000478693" language="JavaScript"></script>	
-</div>
-   
-
 <script type="text/javascript">
     
   (function(){
         $("article img").each(function(index,value){
-
             var aDom=$("<a></a>").attr({
                 "href":$(value).attr("src"),
                 "data-lightbox":$(value).attr("src"),
                 "data-title":$(value).attr("alt")
               });
             $(value).wrap(aDom);
-
         });
         var range=parseInt((Date.now()-new Date("2017-05-31"))/(1000*3600*24));
-        $("#history").html("博客已经上线:"+range+"天")
-         if(window.location.href.indexOf("127.0.0.1")===-1){
-           $("#pvLi").append('<a><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3215509&c=9646840" alt="AmazingCounters.com"></a>');
-         }
+        $("#history").html("博客上线:"+range+"天&nbsp&nbsp"+$("#history").html())
+       
 
     
     })();
@@ -171,3 +164,5 @@ var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.
 document.write('<script src="' + src + '" id="sozz"><\/script>');
 })();
 </script>
+<script language="javascript" type="text/javascript" src="//js.users.51.la/19353542.js"></script>
+<noscript><a href="//www.51.la/?19353542" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="//img.users.51.la/19353542.asp" style="border:none" /></a></noscript>
