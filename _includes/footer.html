@@ -111,7 +111,15 @@
 <script type="text/javascript">
     
   (function(){
-        $("article img").each(function(index,value){
+        
+          $("article a").each(function(index,value){
+
+            $(value).attr({
+               "target":"_blank"
+            });
+ 
+          });
+          $("article img").each(function(index,value){
             var aDom=$("<a></a>").attr({
                 "href":$(value).attr("src"),
                 "data-lightbox":$(value).attr("src"),
