@@ -10,7 +10,7 @@ author: '老付'
 
    ![haibao](/img/assets/babahaibao.jpg){:style="margin-left:auto"}
 
-   高清下载地址:链接：[http://pan.baidu.com/s/1c2rLEQs](http://pan.baidu.com/s/1c2rLEQs){:target="_blank"} 密码：sp2s           
+   高清下载地址:链接：[http://www.laofu.online/2017/12/12/shuaijiaoBB/](http://www.laofu.online/2017/12/12/shuaijiaoBB/){:target="_blank"}       
 
 -----------------------------------------         
 
