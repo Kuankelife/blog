@@ -2,7 +2,7 @@
  * @Author: fuwei
  * @Date:   2017-09-08 13:14:47
  * @Last Modified by:   fuwei
- * @Last Modified time: 2017-12-14 18:35:34
+ * @Last Modified time: 2017-12-21 14:31:51
  */
 var catalog = function($) {
   var _config = {
