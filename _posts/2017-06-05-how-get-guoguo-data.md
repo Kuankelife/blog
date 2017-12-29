@@ -14,9 +14,16 @@ author: '老付'
 
 ------------------- 		
   
-				 声明:此文只做技术交流,请不要恶意攻击,当然我也相信阿里的技术，不可能轻意被攻破的。     
+			   
+	 声明:此文只做技术交流,请不要恶意攻击,当然我也相信阿里的技术，不可能轻意被攻破的。     
 
--------------------			
+-------------------			   
+
+本文Demo下载：      
+
+   [菜鸟裹裹Demo](https://u7704756.pipipan.com/fs/7704756-232761900)（可能已经不能用）       
+   [快递100数据Demo](https://u7704756.pipipan.com/fs/7704756-232761947)
+
 
 ### 监控Ajax请求     
 
@@ -37,8 +44,7 @@ author: '老付'
  
  从上面的请求和响应结果可以看出,请求的参数为:**v, api, appKey, t, callback, type, sign, data**，其中很明显sign是加密的,appKey在多次请求验证后发现是一个固定的值,callback是回调的参数,这个我们用不到，直接给一个任意值就可以，根据callback参数和type=jsonp,可以推测出,菜鸟使用的跨域回调的方法来进行数据传输的,这里也在js代码里面已经有验证了,采用的是动态追加<script>标签的方法(可以自己去验证)。          
 
- 右击查看在新的标签布页打开链接,查看数据详细：   
-
+ 右击查看在新的标签布页打开链接,查看数据详细：
   ![jsonp](/img/assets/GuoGuojson.png)    
 
  > utl链接：http://api.wap.guoguo-app.com/h5/mtop.cnwireless.cnlogisticdetailservice.wapquerylogisticpackagebymailno/1.0/?v=1.0&api=mtop.cnwireless.CNLogisticDetailService.wapqueryLogisticPackageByMailNo&appKey=12574478&t=1496640120201&callback=mtopjsonp14&type=jsonp&sign=1d53d2faaf0e067f21b4b43b95d5ee9c&data=xxxx     
@@ -401,8 +407,6 @@ author: '老付'
 
 
 
-   [菜鸟裹裹Demo](https://u7704756.pipipan.com/fs/7704756-232761900)（可能已经不能用）
-   [快递100数据Demo](https://u7704756.pipipan.com/fs/7704756-232761947)
 
 
 
